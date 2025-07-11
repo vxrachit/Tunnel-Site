@@ -6,12 +6,15 @@ import {
   Linkedin,
   TerminalSquare,
   Info,
-} from 'lucide-react';
+} from "lucide-react";
+import SparkleCanvas from "./SparkleCanvas"; // Import the sparkle effect
 
 function App() {
   return (
     <div className="relative h-screen w-full bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white overflow-hidden flex flex-col justify-between">
-      
+      {/* Sparkle Canvas Background */}
+      <SparkleCanvas />
+
       {/* ✨ Glowing Background Animations */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="absolute w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-ping top-10 left-10"></div>
@@ -82,7 +85,9 @@ function App() {
           <Shield className="h-3 w-3" />
           <span>Powered by Cloudflare Global Network</span>
         </div>
-        <p className="mt-1">Built with 🔐 by <span className="text-white font-semibold">vxRachit</span></p>
+        <p className="mt-1">
+          &copy; {new Date().getFullYear()} vxRachit. All rights reserved.
+        </p>
       </footer>
     </div>
   );
